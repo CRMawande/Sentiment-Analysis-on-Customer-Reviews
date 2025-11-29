@@ -67,15 +67,21 @@ pip install -r requirements.txt
 ```
 
 ##### **Step 2.3: Ensure Model Availability**
-The application requires the fine-tuned DistilBERT model to be present in a specific directory. 
+The application requires the fine-tuned DistilBERT model to be present in the **./models/beauty_sentiment_model_final/**
+ directory. 
 
 **Action Required:** Ensure the following directory exists and contains the unzipped model files.
 
 1. Create Directory: If missing, create the necessary subdirectory structure:
 ```bash
-./models/beauty_sentiment_model_final/
+# On Windows
+mkdir models\beauty_sentiment_model_final
+# On macOS/Linux:
+mkdir -p models/beauty_sentiment_model_final
 ```
-2. Unzip Model: Locate the provided compressed file **(beauty_sentiment_model_final.zip)**, which should be available in the main project folder.
+2. Download and unzip the **beauty_sentiment_model_final.zip**:
+
+- [Click to download](https://drive.google.com/uc?export=download&id=1R_Ish7INXdlWcPDeWk5-YSa6AoW6lD-S) and upload it in the directory.
 
 - Unzip the contents of this ZIP file (which contains the beauty_sentiment_model_final folder) directly into the ./models/ directory.
 
@@ -89,15 +95,15 @@ The application is run using **Streamlit**. Navigate to the main project directo
 streamlit run app/streamlit_app.py
 ```
 
-1. Automatic Launch: This command will automatically open the web application in your default browser.
+1. This command will automatically open the web application in your default browser.
 
-2. Access: The application provides a single input text box and a button to analyze the sentiment.
+2. The application provides a single input text box and a button to analyze the sentiment.
 
 ### **4. How to Use the Tool**
 
-1. Input Review: Paste or type a customer review into the text input area on the web page.
+1. Paste or type a customer review into the text input area on the web page.
 
-2. Analyze: Click the "Analyze Sentiment" button.
+2. Click the "Analyze Sentiment" button.
 
 3. View Results:
 
